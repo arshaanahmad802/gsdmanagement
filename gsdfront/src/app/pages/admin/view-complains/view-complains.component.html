@@ -1,0 +1,22 @@
+
+<mat-card *ngFor="let r of remedy" style="margin-top: 10px;">
+    <mat-card-header>
+        <mat-card-subtitle>
+            GSD No {{r.rid}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{r.description}}</p>
+    </mat-card-content>
+    <mat-card-action>
+        
+        <button mat-stroked-button color="primary" style="font-size: small;">{{r.status}}</button>
+        <button mat-stroked-button color="primary" style="margin-left: 10px; font-size: small;">{{r.creationDate}}</button>
+        <button mat-stroked-button color="primary" style="margin-left: 10px; font-size: small;">{{r.adminId}}</button>
+        <button mat-stroked-button color="primary" style="margin-left: 10px; font-size: small;">{{r.category}}</button>
+        <button [routerLink]="'/admin/remedy/' + r.rid" mat-flat-button color="primary" style="margin-left: 10px;">Update</button>
+        <button mat-flat-button color="warn" (click)="deleteRemedy(r.rid)" style="margin-left: 10px;">Delete</button>
+        
+        
+    </mat-card-action>
+</mat-card>

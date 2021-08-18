@@ -1,0 +1,34 @@
+<mat-toolbar color = "primary">
+    <a routerLink="">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" style="color: white;">
+      <mat-icon>manage_accounts</mat-icon>
+    </button>
+    </a>
+    <span>GSD Management</span>
+    <span class="example-spacer"></span>
+    <a *ngIf="!login.isLoggedIn()" routerLink="/login">
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" style="color: white;">
+      <mat-icon>login</mat-icon>
+
+    </button>
+    </a>
+
+    <a *ngIf="!login.isLoggedIn()" routerLink="/signup">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="color: white;">
+      <mat-icon>app_registration</mat-icon>
+    </button>
+    </a>
+
+    <a *ngIf="login.isLoggedIn()" (click)="showDetails()">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="color: white;">
+        <mat-icon>face</mat-icon>
+      </button>
+      </a>
+
+    <a *ngIf="login.isLoggedIn()" (click)="logout()">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="color: white;">
+        <mat-icon>logout</mat-icon>
+      </button>
+      </a>
+  </mat-toolbar>
+  

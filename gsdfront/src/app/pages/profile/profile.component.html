@@ -1,0 +1,70 @@
+<mat-card>
+    <h3>Your profile details</h3>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://www.global.hokudai.ac.jp/wp-content/uploads/2020/07/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg" alt="" class="profile-image">
+                    <h1>{{user.firstName}} {{user.lastName}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+
+                        <table class="table text-center">
+                            <tr>
+                                <td>
+                                    First Name
+                                </td>
+                                <td>
+                                    {{user.firstName}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Employee Id
+                                </td>
+                                <td>
+                                    {{user.empId}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Contact
+                                </td>
+                                <td>
+                                    {{user.phone}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email ID
+                                </td>
+                                <td>
+                                    {{user.email}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Role ID
+                                </td>
+                                <td>
+                                    {{user.authorities[0].authority}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   Staus
+                                </td>
+                                <td>
+                                    {{user.enabled?"ACTIVE":"NOT ACTIVE"}}
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </mat-card-content>
+</mat-card>

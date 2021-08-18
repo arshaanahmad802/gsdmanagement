@@ -1,0 +1,39 @@
+<mat-card>
+    <h1>Add Complain</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+
+                <form (ngSubmit)="addremedy()">
+                    
+                    <mat-form-field class="w100">
+                        <mat-label>Select</mat-label>
+                        <mat-select [(ngModel)]="remedy.category" name="category">
+                          <mat-option value="Network">Network </mat-option>
+                          <mat-option value="Leave">Leave</mat-option>
+                          <mat-option value="Travel">Travel</mat-option>
+                          <mat-option value="Reimbursement">Reimbursement</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                    
+
+                    <mat-form-field class="w100">
+                        <mat-label>Description</mat-label>
+                        <textarea [(ngModel)]="remedy.description" type="text" name="description" placeholder="Enter here" matInput></textarea>
+
+                    </mat-form-field>
+                    
+
+                    <div class="container text-center">
+
+                        <button mat-raised-button color="primary" type="submit">ADD</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</mat-card>
